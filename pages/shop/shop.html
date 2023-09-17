@@ -31,51 +31,336 @@
             </ul>
         </nav>
     </header>
-    <aside>
-        <section>
-            <h3>BUSCAR</h3>
-            <form action="datos.js" method="GET"> <!-- Que archivo utilizo para conseguir mis datos? -->
-                <label for="busqueda"></label>
-                <input type="text" name="busqueda" id="busqueda">
-            </form>
-        </section>
-        <section>
-            <h3>ORDENAR POR</h3>
-            <form action="datos.js" method="GET">
-                <select name="orden" id="orden">
-                    <option value="Descendiente">Mayor a menor</option> <!-- Mas opciones para ordenar -->
-                </select>
-            </form>
-        </section>
-        <section>
-            <h3>PRECIO</h3>                         <!-- Una seccion dentro de una seccion? -->
-            <form action="datos.js" method="GET">
-                <section>
-                    <label for="min">Min</label>
-                    <input type="number" name="min" id="min">
-                </section>
-                <section>
-                    <label for="max">Max</label>
-                    <input type="number" name="max" id="max">
-                </section>
-            </form>
-        </section>
-            <h3>FILTRAR</h3>
-            <form action="datos.js" method="GET">
-                <input type="checkbox" name="filtro" id="filtro" value="nuevos">
-                <label for="">NUEVOS</label>
-                <input type="checkbox" name="filtro" id="filtro" value="ofertas">
-                <label for="">OFERTAS</label>
-                <input type="checkbox" name="filtro" id="filtro" value="edicion especial">
-                <label for="">EDICION ESPECIAL</label>
-                <input type="checkbox" name="filtro" id="filtro" value="favoritos">
-                <label for="">FAVORITOS</label>
-            </form>
-    </aside>
     <main>
+        <aside>
+            <div>
+                <label for="search">BUSCAR</label>
+                <input type="text" name="search" id="search" placeholder="item o categoria">
+            </div>
+            <div>
+                <label for="ordenby">ORDENAR POR</label>
+                <select name="orderby" id="orderby">
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                    <option value="desc">Mayor precio</option>
+                    <option value="asc">Menor precio</option>
+                </select>
+            </div>
+            <div>
+                <span>PRECIO</span>
+                <div>
+                    <label for="min">MIN</label>
+                    <input type="text" name="min" id="min" placeholder="0">
+                    <label for="max">MAX</label>
+                    <input type="text" name="max" id="max" placeholder="0">
+                </div>
+            </div>
+            <div>
+                <span>FILTRAR</span>
+                <div>
+                    <input type="text" name="filter" id="news" value="news">
+                    <label for="">NUEVOS</label>
+                </div>
+                <div>
+                    <input type="text" name="filter" id="offers" value="offers">
+                    <label for="">OFERTAS</label>
+                </div>
+                <div>
+                    <input type="text" name="filter" id="specials" value="specials">
+                    <label for="">EDICION ESPECIAL</label>
+                </div>
+                <div>
+                    <input type="text" name="filter" id="favs" value="favs">
+                    <label for="">FAVORITOS</label>
+                </div>
+            </div>
+            <!-- <section>
+                <h3>BUSCAR</h3>
+                <form action="datos.js" method="GET"> Que archivo utilizo para conseguir mis datos? 
+                    <label for="busqueda"></label>
+                    <input type="text" name="busqueda" id="busqueda">
+                </form>
+            </section>
+            <section>
+                <h3>ORDENAR POR</h3>
+                <form action="datos.js" method="GET">
+                    <select name="orden" id="orden">
+                        <option value="Descendiente">Mayor a menor</option>  Mas opciones para ordenar
+                    </select>
+                </form>
+            </section>
+            <section>
+                <h3>PRECIO</h3>                          Una seccion dentro de una seccion? 
+                <form action="datos.js" method="GET">
+                    <section>
+                        <label for="min">Min</label>
+                        <input type="number" name="min" id="min">
+                    </section>
+                    <section>
+                        <label for="max">Max</label>
+                        <input type="number" name="max" id="max">
+                    </section>
+                </form>
+            </section>
+                <h3>FILTRAR</h3>
+                <form action="datos.js" method="GET">
+                    <input type="checkbox" name="filtro" id="filtro" value="nuevos">
+                    <label for="">NUEVOS</label>
+                    <input type="checkbox" name="filtro" id="filtro" value="ofertas">
+                    <label for="">OFERTAS</label>
+                    <input type="checkbox" name="filtro" id="filtro" value="edicion especial">
+                    <label for="">EDICION ESPECIAL</label>
+                    <input type="checkbox" name="filtro" id="filtro" value="favoritos">
+                    <label for="">FAVORITOS</label>
+                </form> -->
+        </aside>
         <section>
+            <ul>
+
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                                <img src="img/star-wars/baby-yoda-box.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/star-wars/bobbafeth-1.webp" alt="Figura coleccionable Funko de Bobbafeth de la serie The Mandalorian">
+                                <img src="img/star-wars/bobbafeth-box.webp" alt="Figura coleccionable Funko de Bobbafeth de la serie The Mandalorian en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/star-wars/luke-1.webp" alt="Figura coleccionable Funko de Luke de la serie The Mandalorian">
+                                <img src="img/star-wars/luke-box.webp" alt="Figura coleccionable Funko de Luke de la serie The Mandalorian en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de un Stormtrooper de la serie The Mandalorian">
+                                <img src="img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de un Stormtrooper de la serie The Mandalorian en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                                <img src="img/star-wars/baby-yoda-box.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/pokemon/charmander-1.webp" alt="Figura coleccionable Funko de Charmander de la serie Pokemon">
+                                <img src="img/pokemon/charmander-box.webp" alt="Figura coleccionable Funko de Charmander de la serie Pokemon en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/pokemon/dragonite-1.webp" alt="Figura coleccionable Funko de Dragonite de la serie Pokemon">
+                                <img src="img/pokemon/dragonite-box.webp" alt="Figura coleccionable Funko de Dragonite de la serie Pokemon en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
+                                <img src="img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/pokemon/pikachu-1.webp" alt="Figura coleccionable Funko de Pikachu de la serie Pokemon">
+                                <img src="img/pokemon/pikachu-box.webp" alt="Figura coleccionable Funko de Pikachu de la serie Pokemon en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon">
+                                <img src="img/pokemon/vulpix-box.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/harry-potter/harry-1.webp" alt="Figura coleccionable Funko de Harry de la pelicula Harry Potter">
+                                <img src="img/harry-potter/harry-box.webp" alt="Figura coleccionable Funko de Grogu de la pelicula Harry Potter en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/harry-potter/hermione-1.webp" alt="Figura coleccionable Funko de Hermione de la pelicula Harry Potter">
+                                <img src="img/harry-potter/hermione-box.webp" alt="Figura coleccionable Funko de Hermione de la pelicula Harry Potter en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood de la pelicula Harry Potter">
+                                <img src="img/harry-potter/luna-box.webp" alt="Figura coleccionable Funko de Luna Lovegood de la pelicula Harry Potter en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="shop/item/1">
+                            <picture>
+                                <span>Nuevo</span>
+                                <img src="./img/harry-potter/snape-patronus-1.webp" alt="Figura coleccionable Funko del Patronus de Snape de la pelicula Harry Potter">
+                                <img src="img/harry-potter/snape-patronus-box.webp" alt="Figura coleccionable Funko del Patronus de Snape de la pelicula Harry Potter en caja">
+                            </picture>
+                            <div>
+                                <p>Star Wars</p>
+                                <h4>Baby Yoda Blueball</h4>
+                                <p>$1799.99</p>
+                                <p>3 CUOTAS SIN INTERES</p>
+                            </div>
+                        </a>
+                    </article>
+                </li>
+
+            </ul>
+        </section>
+        <!-- <section>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> Referencia al item? 
                     <picture>
                         <img src="./img/star-wars/trooper-1.webp" alt="Figura colecionable Funko de un Stormtrooper de la serie The Mandalorian">
                     </picture>
@@ -88,7 +373,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
                     </picture>
@@ -101,7 +386,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood de la pelicula de Harry Potter">
                     </picture>
@@ -116,7 +401,7 @@
         </section>
         <section>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/star-wars/trooper-1.webp" alt="Figura colecionable Funko de un Stormtrooper de la serie The Mandalorian">
                     </picture>
@@ -129,7 +414,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
                     </picture>
@@ -142,7 +427,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood de la pelicula de Harry Potter">
                     </picture>
@@ -157,7 +442,7 @@
         </section>
         <section>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/star-wars/trooper-1.webp" alt="Figura colecionable Funko de un Stormtrooper de la serie The Mandalorian">
                     </picture>
@@ -170,7 +455,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
                     </picture>
@@ -183,7 +468,7 @@
                 </a>
             </article>
             <article>
-                <a href=""> <!-- Referencia al item? -->
+                <a href=""> 
                     <picture>
                         <img src="./img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood de la pelicula de Harry Potter">
                     </picture>
@@ -195,7 +480,7 @@
                     </div>
                 </a>
             </article>
-        </section>
+        </section> -->
         <section>
             <div class="pagination_section">
                 <a href="#"><< Previous</a>
