@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit | Funkoshop</title>
 </head>
 <body>
     <header> <!-- Inicio Header -->
@@ -26,6 +26,83 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h3>EDITAR ITEM</h3>
+        <div>
+            <form action="" method="get" nctype="application/x-www-form-urlencoded">
+                <label for="categoria">Categoria:</label>
+                <select name="categoria" id="categoria">
+                    <option value="figuras">Figuras</option>
+                </select>
+                <label for="licencia">Licencia:</label>
+                <select name="licencia" id="categoria">
+                    <option value="narutoShippuden">Naruto Shippuden</option>
+                    <option value="harryPotter">Harry Potter</option>
+                    <option value="starWars">Star Wars</option>
+                    <option value="pokemon">Pokemon</option>
+                </select>
+            </form>
+        </div>
+        <div>
+            <form action="" method="get" nctype="application/x-www-form-urlencoded">
+                <label for="nombre">Nombre del producto:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Hatake Kakashi Shippuden Saga">
+            </form>
+        </div>
+        <div>
+            <form action="" method="get" nctype="application/x-www-form-urlencoded">
+                <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto"></textarea>
+            </form>
+        </div>
+        <div>
+            <form action="" method="get" nctype="application/x-www-form-urlencoded">
+                <label for="sku">SKU:</label>
+                <input type="text" name="sku" id="sku" placeholder="SSK111AB001">
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" id="precio" placeholder="0.000,00">
+                <label for="stock">Stock:</label>
+                <input type="text" name="stock" id="stock" placeholder="0">
+            </form>
+        </div>
+        <div>
+            <form action="" method="get" nctype="application/x-www-form-urlencoded">
+                <label for="descuento">Descuento:</label>
+                <input type="text" name="descuento" id="descuento" placeholder="0%">
+                <label for="cuotas">Licencia:</label>
+                <select name="cuotas" id="cuotas" placeholder="3 cuotas sin interes">
+                    <option value="3 cuotas">3 cuotas sin interes</option>
+                    <option value="6 cuotas">6 cuotas sin interes</option>
+                    <option value="9 cuotas">9 cuotas sin interes</option>
+                    <option value="12 cuotas">12 cuotas sin interes</option>
+                </select>
+            </form>
+        </div>
+        <div>
+            <form action="" method="get" enctype="application/x-www-form-urlencoded">
+                <label for="imagen">Imagenes:</label>
+                <input type="file" name="imagen" id="imagen">
+            </form>
+        </div>
+        <article>
+            <picture>
+                <img src="./img/star-wars/trooper-1.webp" alt="Figura colecionable Funko de un Stormtrooper de la serie The Mandalorian">
+            </picture>
+            <div>
+                <h5>Frente</h5>
+            </div>
+        </article>
+        <article>
+            <picture>
+                <img src="./img/star-wars/trooper-box.webp" alt="Figura colecionable Funko de un Stormtrooper de la serie The Mandalorian en caja">
+            </picture>
+            <div>
+                <h5>Dorso</h5>
+            </div>
+        </article>
+        <div>
+            <button type="submit">Modificar Producto</button>
+        </div>
+    </main>
     <footer>
         <section>
             <nav>

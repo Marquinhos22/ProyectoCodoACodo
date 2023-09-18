@@ -33,96 +33,88 @@
     </header>
     <main>
         <section>
-        <h2>CARRITO DE COMPRAS</h2>
-        <span><!-- No se si esta bien los div dentro de un span -->
             <div>
-                <p>DETALLE DEL PRODUCTO</p>
+                <h2>CARRITO DE COMPRAS</h2>
             </div>
-            <div>
-                <p>CANTIDAD</p>
-            </div>
-            <div>
-                <p>TOTAL</p>
-            </div>
-        </span>
-        <ul>
-            <li>
-                <div>
-                    <article>
-                        <picture>
-                            <img src="./img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
-                        </picture>
-                        <h3>BABY YODA BLUEBALL</h3>
-                        <p>STAR WARS</p>
-                        <p>Precio unitario: $ 1799,99</p>
-                    </article>
-                    <div>
-                        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-                            <button id="subtract" type="button">-</button>
-                            <input type="text" id="quantity" name="quantity" placeholder="0">
-                            <button id="add" type="button">+</button>
-                            <button type="submit">Agregar al carrito</button>
-                        </form>
-                    </div>
-                    <div>
-                        <p>$ 3599,98</p>
-                    </div>
-                    <div>
-                        <button id="delete" type="button">x</button>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <article>
-                        <picture>
-                            <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
-                        </picture>
-                        <h3>PIDGEOTTO</h3>
-                        <p>POKEMON</p>
-                        <p>Precio unitario: $ 1799,99</p>
-                    </article>
-                    <div>
-                        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-                            <button id="subtract" type="button">-</button>
-                            <input type="text" id="quantity" name="quantity" placeholder="0">
-                            <button id="add" type="button">+</button>
-                            <button type="submit">Agregar al carrito</button>
-                        </form>
-                    </div>
-                    <div>
-                        <p>$ 1799,99</p>
-                    </div>
-                    <div>
-                        <button id="delete" type="button">x</button>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            <table>
+                <tr>
+                    <th>DETALLE DEL PRODUCTO</th>
+                    <th>CANTIDAD</th>
+                    <th>TOTAL</th>
+                </tr>
+                <tr>
+                    <td>
+                        <article>
+                            <picture>
+                                <img src="./img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                            </picture>
+                            <h3>BABY YODA BLUEBALL</h3>
+                            <p>STAR WARS</p>
+                            <p>Precio unitario: $ 1799,99</p>
+                        </article>
+                    </td>
+                    <td>
+                        <div>
+                            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                <button id="subtract" type="button">-</button>
+                                <input type="text" id="quantity" name="quantity" placeholder="0">
+                                <button id="add" type="button">+</button>
+                                <button type="submit">Agregar al carrito</button>
+                            </form>
+                        </div>
+                    </td>
+                    <td>$ 3599,98</td>
+                    <td><button id="delete" type="button">x</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <article>
+                            <picture>
+                                <img src="./img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
+                            </picture>
+                            <h3>PIDGEOTTO</h3>
+                            <p>POKEMON</p>
+                            <p>Precio unitario: $ 1799,99</p>
+                        </article>
+                    </td>
+                    <td>
+                        <div>
+                            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                <button id="subtract" type="button">-</button>
+                                <input type="text" id="quantity" name="quantity" placeholder="0">
+                                <button id="add" type="button">+</button>
+                                <button type="submit">Agregar al carrito</button>
+                            </form>
+                        </div>
+                    </td>
+                    <td>$ 1799,99</td>
+                    <td><button id="delete" type="button">x</button></td>
+                </tr>
+            </table>
         </section>
         <section>
-            <h2>RESUMEN</h2>
+        <h2>RESUMEN</h2>
             <article>
-                <span>
+                <div>
                     <p>CANTIDAD DE ELEMENTOS</p>
                     <p>3</p>
-                </span>
-                <span>
+                </div>
+                <div>
                     <p>SUBTOTAL</p>
                     <p>$ 5399,97</p>
-                </span>
-                <span>
+                </div>
+                <div>
                     <p>ENVIO</p>
                     <p>$ 0,00</p>
-                </span>
-                <span>
+                </div>
+                <div>
                     <h4>TOTAL</h4>
                     <p>$ 5399,97</p>
-                </span>
+                </div>
             </article>
-            <span>
+            <div>
                 <a href=""><button type="submit">IR A PAGAR</button></a>
-            </span>
+            </div>
         </section>
     </main>
     <footer>
