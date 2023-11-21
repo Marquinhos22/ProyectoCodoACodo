@@ -4,140 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart | Funkoshop</title>
+    <link rel="stylesheet" href="../../css/cart.css">
+    <link rel="icon" href="../../img/branding/isotype.svg">
 </head>
 <body>
     <header> <!-- Inicio Header -->
-        <nav>
-            <picture>
-                <a href="./../../index.html">
-                    <img src="./../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
+        <nav class="navbar">
+            <picture class="navbar__logo">
+                <a href="../../index.html">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="./shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="../shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#" class="submenu__link">LLavero</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="./contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/contact.html">CONTACTO</a> <!-- Pagina de contacto?-->
                 </li>
-                <li>
-                    <a href="./../admin/login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./cart.html">
-                        <img src="./../../img/icons/cart-icon.svg" alt="Icono de carrito">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="../shop/shop.html">
+                        <img src="../../img/icons/cart-icon.svg" alt="Icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <div>
-                <h2>CARRITO DE COMPRAS</h2>
-            </div>
-            <table>
-                <tr>
-                    <th>DETALLE DEL PRODUCTO</th>
-                    <th>CANTIDAD</th>
-                    <th>TOTAL</th>
+     <!-- Fin Header -->
+    <main class="main-container container">
+        <div class="carrito">
+            <h2 class="carrito-title">CARRITO DE COMPRAS</h2>
+        </div>
+        <section class="carrito-content">
+            <!--div class="carrito">
+                <h2 class="carrito-title">CARRITO DE COMPRAS</h2>
+            </div--->
+            <table class="carrito-table container">
+                <tr class="table-content">
+                    <th class="table-text">DETALLE DEL PRODUCTO</th>
+                    <th class="table-text">CANTIDAD</th>
+                    <th class="table-text">TOTAL</th>
                 </tr>
-                <tr>
-                    <td>
-                        <article>
-                            <picture>
-                                <img src="./../../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                <tr class="table-conteiner container">
+                    <td class="table-item__content">
+                        <article class="table-item">
+                            <picture class="table-cover">
+                                <img class="table-img" src="./../../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
                             </picture>
-                            <h3>BABY YODA BLUEBALL</h3>
-                            <p>STAR WARS</p>
-                            <p>Precio unitario: $ 1799,99</p>
+                            <div class="table-1">
+                                <h3 class="table-licence">BABY YODA BLUEBALL</h3>
+                                <p class="table-name">STAR WARS</p>
+                                <p class="table-price">Precio unitario: $ 1799,99</p>
+                            </div>
                         </article>
                     </td>
-                    <td>
-                        <div>
-                            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-                                <button id="subtract" type="button">-</button>
-                                <input type="text" id="quantity" name="quantity" placeholder="0">
-                                <button id="add" type="button">+</button>
-                                <button type="submit">Agregar al carrito</button>
+                    <td class="table-2">
+                        <div class="item-gene">
+                            <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="0">
+                                <div class="boton">
+                                    <button class="item-masmen" id="subtract" type="button">-</button>
+                                    <button class="item-masmen" id="add" type="button">+</button>
+                                </div>
                             </form>
                         </div>
                     </td>
-                    <td>$ 3599,98</td>
-                    <td><button id="delete" type="button">x</button></td>
+                    <td class="table-precio">$3599,98</td>
+                    <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
                 </tr>
-                <tr>
-                    <td>
-                        <article>
-                            <picture>
-                                <img src="./../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
+                <tr class="table-conteiner container">
+                    <td class="table-item__content">
+                        <article class="table-item">
+                            <picture class="table-cover">
+                                <img class="table-img" src="./../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
                             </picture>
-                            <h3>PIDGEOTTO</h3>
-                            <p>POKEMON</p>
-                            <p>Precio unitario: $ 1799,99</p>
+                            <div class="table-1">
+                                <h3 class="table-licence">PIDGEOTTO</h3>
+                                <p class="table-name">POKEMON</p>
+                                <p class="table-price">Precio unitario: $ 1799,99</p>
+                            </div>
                         </article>
                     </td>
-                    <td>
-                        <div>
-                            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-                                <button id="subtract" type="button">-</button>
-                                <input type="text" id="quantity" name="quantity" placeholder="0">
-                                <button id="add" type="button">+</button>
-                                <button type="submit">Agregar al carrito</button>
+                    <td class="table-2">
+                        <div class="item-gene">
+                            <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="0">
+                                <div class="boton">
+                                    <button class="item-masmen" id="subtract" type="button">-</button>
+                                    <button class="item-masmen" id="add" type="button">+</button>
+                                </div>
                             </form>
                         </div>
                     </td>
-                    <td>$ 1799,99</td>
-                    <td><button id="delete" type="button">x</button></td>
+                    <td class="table-precio">$ 1799,99</td>
+                    <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
                 </tr>
             </table>
         </section>
-        <section>
-        <h2>RESUMEN</h2>
-            <article>
-                <div>
-                    <p>CANTIDAD DE ELEMENTOS</p>
-                    <p>3</p>
+        <section class="resumen">
+        <h2 class="resumen-title">RESUMEN</h2>
+            <article class="resumen-content">
+                <div class="resumen-cant">
+                    <p class="resumen-cant__el">CANTIDAD DE ELEMENTOS</p>
+                    <p class="resumen-cant-num">3</p>
                 </div>
-                <div>
-                    <p>SUBTOTAL</p>
-                    <p>$ 5399,97</p>
+                <div class="resumen-cant">
+                    <p class="resumen-cant__el">SUBTOTAL</p>
+                    <p class="resumen-cant-num">$ 5399,97</p>
                 </div>
-                <div>
-                    <p>ENVIO</p>
-                    <p>$ 0,00</p>
+                <div class="resumen-cant">
+                    <p class="resumen-envio">ENVIO</p>
+                    <p class="resumen-cant-num">$ 0,00</p>
                 </div>
-                <div>
-                    <h4>TOTAL</h4>
-                    <p>$ 5399,97</p>
+                <div class="resumen-totales resumen-cant">
+                    <h4 class="resum-total">TOTAL</h4>
+                    <p class="resumen-price">$ 5399,97</p>
                 </div>
             </article>
-            <div>
-                <a href=""><button type="submit">IR A PAGAR</button></a>
+            <div class="resumen-boton">
+                <a class="enlace-boton" href="#"><button class="resum-boton" type="submit">IR A PAGAR</button></a>
             </div>
         </section>
     </main>
-    <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="./../admin/login.html">INGRESAR</a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="./../../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop"> <!-- Tuve que cambiar los archivos de lugar para que funcionara-->
-                </picture>
+    <br>
+    <footer class="footer"><!--Inicio Footer-->
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../shop/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/login.html">INGRESAR</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/shop/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+            </picture>
             </nav>
-
-        </section>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
+    <!--Fin Footer-->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>
