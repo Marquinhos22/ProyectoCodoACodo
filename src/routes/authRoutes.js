@@ -1,27 +1,18 @@
 const express = require('express');
+const authControllers = require('../controllers/authControllers');
 
 //necesito el metodo router() de express
 const router = express.Router();
 
-router.get('/login', (req, res) => {
-    res.send('Esta ruta devuelve la vista de Login');
-})
+router.get('/login', authControllers.loginG)
 
-router.post('/login', (req, res) => {
-    res.send('Esta envia datos para el logueo');
-})
+router.post('/login', authControllers.loginP)
 
-router.get('/register', (req, res) => {
-    res.send('Esta ruta devuelve la vista de Registro a la page');
-})
+router.get('/register', authControllers.registerG)
 
-router.post('/register', (req, res) => {
-    res.send('Esta envia datos para el registro a la page');
-})
+router.post('/register', authControllers.registerP)
 
-router.get('/logout', (req, res) => {
-    res.send('Esta ruta devuelve la vista de deslogueo');
-})
+router.get('/logout', authControllers.logout)
 
 
 module.exports = router;
