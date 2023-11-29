@@ -1,30 +1,19 @@
 const express = require('express');
+const adminControllers = require('../controllers/adminControllers');
 
 //necesito el metodo router() de express
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Esta ruta devuelve la vista de Admin');
-})
+router.get('/', adminControllers.admin)
 
-router.get('/create', (req, res) => {
-    res.send('Esta ruta devuelve la vista de creacion de un user');
-})
+router.get('/create', adminControllers.createG)
 
-router.post('/create', (req, res) => {
-    res.send('Esta ruta envia los datos para la creacion de un user');
-})
+router.post('/create', adminControllers.createP)
 
-router.get('/edit/:id', (req, res) => {
-    res.send(`Esta ruta devuelve la vista del user ID: ${req.params.id}`);
-})
+router.get('/edit/:id', adminControllers.editIDG)
 
-router.put('/edit/:id', (req, res) => {
-    res.send(`Esta ruta actualiza los datos del user ID: ${req.params.id}`);
-})
+router.put('/edit/:id', adminControllers.editIDPU)
 
-router.delete('/delete/:id', (req, res) => {
-    res.send(`Esta ruta elimina el user ID: ${req.params.id}`);
-})
+router.delete('/delete/:id', adminControllers.deleteID)
 
 module.exports = router;
