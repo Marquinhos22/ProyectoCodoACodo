@@ -1,36 +1,29 @@
-//importo los modulos que necesito con require
 const express = require('express');
-const path = require('path');
-/*
-//Rutas
-const mainRoutes = require('./src/routes/mainRoutes');
-const shopRoutes = require('./src/routes/shopRoutes');
-const adminRoutes = require('./src/routes/adminRoutes');
-const authRoutes = require('./src/routes/authRoutes');
-*/
-
 const app = express();
-const PORT = 3000;
+const methodOverride = require('method-override');
 
-// Configuracion ejs
+/** ROUTES IMPORT */
+const mainRoutes = require('./src/routes/main.routes');
+const shopRoutes = require('./src/routes/shop.routes');
+const adminRoutes = require('./src/routes/admin.routes');
+const authRoutes = require('./src/routes/auth.routes');
+const path = require('path');
+
+const PORT = 3004;
+
+
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,"/src/views"));
+app.set('views', path.join(__dirname, './src/views'));
 
-/*
-//Para navegar con los links estaticos
+
+
+app.use('/', mainRoutes)
+app.use('/shop', shopRoutes)
+app.use('/admin',adminRoutes)
+app.use('/auth', authRoutes)
+
 app.use(express.static('public'));
-
-//Para navegar a traves de peticiones url
-app.use('/',mainRoutes);
-app.use('/shop',shopRoutes);
-app.use('/admin',adminRoutes);
-app.use('/auth',authRoutes);
-*/
-//Para probar EJS
-const router = express.Router();
-router.get('/',(req,res) => res.render('index'));
-
-app.listen(PORT, () => {
-    console.log(`El servidor esta corriendo el puerto 3000  http://localhost:${PORT}` )});
-
-module.exports = router;    
+app.use(methodOverride('_method'));
+app.use(express.urlencoded());
+app.use(express.json())
+app.listen(PORT, ()=> console.log(`Servidor corriendo en ⚡ http://localhost:${PORT}`))

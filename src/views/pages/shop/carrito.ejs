@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Carrito</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../multimedia/branding/isotype.svg">
+        <link rel="stylesheet" href="../../css/index.css"">
+    </head>
+    <body>
+        <%- include('../../partials/header')%>
+
+        
+        <main class="main-container container">
+            <div class="carrito">
+                <h2 class="carrito-title">CARRITO DE COMPRAS</h2>
+            </div>
+            <section class="carrito-content">
+                <!--div class="carrito">
+                    <h2 class="carrito-title">CARRITO DE COMPRAS</h2>
+                </div--->
+                <table class="carrito-table container">
+                    <tr class="table-content">
+                        <th class="table-text">DETALLE DEL PRODUCTO</th>
+                        <th class="table-text">CANTIDAD</th>
+                        <th class="table-text">TOTAL</th>
+                    </tr>
+                    <tr class="table-conteiner container">
+                        <td class="table-item__content">
+                            <article class="table-item">
+                                <picture class="table-cover">
+                                    <img class="table-img" src="../../multimedia/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                                </picture>
+                                <div class="table-1">
+                                    <h3 class="table-licence">BABY YODA BLUEBALL</h3>
+                                    <p class="table-name">STAR WARS</p>
+                                    <p class="table-price">Precio unitario: $ 1799,99</p>
+                                </div>
+                            </article>
+                        </td>
+                        <td class="table-2">
+                            <div class="item-gene">
+                                <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="1">
+                                    <div class="boton">
+                                        <button class="item-masmen" id="subtract" type="button">-</button>
+                                        <button class="item-masmen" id="add" type="button">+</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </td>
+                        <td class="table-precio" id="PriceItem">$1799,99</td>
+                        <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
+                    </tr>
+                    <tr class="table-conteiner container">
+                        <td class="table-item__content">
+                            <article class="table-item">
+                                <picture class="table-cover">
+                                    <img class="table-img" src="../../multimedia/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon">
+                                </picture>
+                                <div class="table-1">
+                                    <h3 class="table-licence">PIDGEOTTO</h3>
+                                    <p class="table-name">POKEMON</p>
+                                    <p class="table-price" >Precio unitario: $ 1799,99</p>
+                                </div>
+                            </article>
+                        </td>
+                        <td class="table-2">
+                            <div class="item-gene">
+                                <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="1">
+                                    <div class="boton">
+                                        <button class="item-masmen" id="subtract" type="button">-</button>
+                                        <button class="item-masmen" id="add" type="button">+</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </td>
+                        <td class="table-precio" id="PriceItem">$1799,99</td>
+                        <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
+                    </tr>
+                </table>
+            </section>
+            <section class="resumen">
+            <h2 class="resumen-title">RESUMEN</h2>
+                <article class="resumen-content">
+                    <div class="resumen-cant">
+                        <p class="resumen-cant__el">CANTIDAD DE ELEMENTOS</p>
+                        <p class="resumen-cant-num" id="resumen-cant">1</p>
+                    </div>
+                    <div class="resumen-cant">
+                        <p class="resumen-cant__el" >SUBTOTAL</p>
+                        <p class="resumen-cant-num" id="cart__subtot">$1799,99 </p>
+                    </div>
+                    <div class="resumen-cant">
+                        <p class="resumen-envio">ENVIO</p>
+                        <p class="resumen-cant-num" id="cart__envio">100,00</p>
+                    </div>
+                    <div class="resumen-totales resumen-cant">
+                        <h4 class="resum-total">TOTAL</h4>
+                        <p class="resumen-price" id="cart__total">$1899,99 </p>
+                    </div>
+                </article>
+                <div class="resumen-boton">
+                    <a class="enlace-boton" href="#"><button class="resum-boton" type="submit">IR A PAGAR</button></a>
+                </div>
+            </section>
+        </main>
+        <br>
+
+        <%- include('../../partials/footer')%>
+
+
+
+        
+        <script src="" async defer></script>
+        <script src="/JavaScrip/carrito.js"> </script>
+        
+    </body>
+</html>

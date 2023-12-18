@@ -1,36 +1,38 @@
-<header> <!-- Inicio Header -->
-    <nav class="navbar container">
-        <picture class="navbar__logo">
-            <a href="index.html">
-                <img src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
-            </a>
-        </picture>
-        <ul class="navbar__menu">
-            <li class="navbar__item with-submenu">
-                <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
-                <ul class="submenu">
-                    <li class="submenu__item">
-                        <a class="submenu__link" href="">Funkos</a>
-                    </li>
-                    <li class="submenu__item">
-                        <a class="submenu__link" href="">Remeras</a>
-                    </li>
-                    <li class="submenu__item">
-                        <a class="submenu__link" href="">Llaveros</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="navbar__link" href="./pages/admin/contact.html">CONTACTO</a> <!-- Pagina de contacto?-->
-            </li>
-            <li>
-                <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
-            </li class="navbar__item">
-            <li class="navbar__item">
-                <a class="navbar__cart" href="./pages/shop/cart.html">
-                    <img src="./img/icons/cart-icon.svg" alt="Icono de carrito">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header> <!-- Fin Header -->
+<header class="page-header"> 
+    <!-- Inicio Header -->
+      <nav class="navbar container">
+          <picture class="nabvar__logo">
+              <a href="/">
+                <img src="/multimedia/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop">
+                
+              </a>
+          </picture>
+          <ul class="navbar__menu">
+              <li class="navbar__item with-submenu">
+                  <a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon></a>
+                  <ul class="submenu">
+                      <li class="submenu__item">
+                          <a href="/shop?filter=funkos" class="submenu__link">Funkos</a>
+                      </li>
+                      <li class="submenu__item">
+                          <a href="/shop?filter=remeras" class="submenu__link">Remeras</a>
+                      </li>
+                      <li class="submenu__item">
+                          <a href="/shop?filter=llaveros" class="submenu__link">LLaveros</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a class="navbar__link" href="/contact">CONTACTO</a>
+              </li class="navbar__item">
+              <li>
+                  <a class="navbar__link" href="/auth">LOGIN</a>
+              </li class="navbar__item">
+              <li class="navbar__item">
+                  <a class="navbar__cart" href="/shop/carrito">
+                      <img src="/multimedia/icons/cart-icon.svg" alt="ícono de carrito">
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </header>
