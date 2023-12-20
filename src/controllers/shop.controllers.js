@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const productService = require('../services/product.service');
 
 //empiezan datos de las card
 const data = [
@@ -114,17 +115,29 @@ const data = [
     ];
 
 module.exports = {
-    shop : (req, res) =>{
+    shop : async (req, res) =>{
+        const products = await productService.getAllproducts();
+        const { data } = products; 
 
-         res.render(path.resolve(__dirname, '../views/pages/shop/shop.ejs'),{
-            data  
-        })
-    },
-    item : (req, res)=>{
-        const itemId = req.params.id;
-        const item = data.find(item => item.product_id == itemId);
+        res.render(path.resolve(__dirname, '../views/pages/shop/shop.ejs'),{
+            view: {
+                title: "Shop | Funkoshop"
+            },
+            items: data
+        });
+    }, 
+    item : async (req, res)=>{
+        const productId = req.params.id;
+        const product = await productService.getproduct(productId);
+        const { data } = product;
+        if(!data[0]){
+            res.status(404).send('El producto con el ID seleccionado no existe o fue eliminado.')
+        }
         res.render(path.resolve(__dirname, '../views/pages/shop/item.ejs'),{
-            item
+            view: {
+                title: "Item | Funkoshop"
+            },
+            item: data[0]
         });
     },
     carrito : (req, res)=>{

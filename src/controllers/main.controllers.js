@@ -1,12 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 
-
-
 module.exports ={
-    home:(req, res)=> {
+
+    home: async (req, res)=> {
         res.render('index',{
-            title : "HOME modificado",
+            title : "HOME",
             isLogged : true
         });
     },

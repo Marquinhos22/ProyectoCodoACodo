@@ -13,54 +13,54 @@
     <%- include('../../partials/header')%>
 
 
-    <main id="edit">
+    <main id="edit" class="container">
         <h2 class="edit__title">EDITAR ITEM</h2>
         <form class="edit__form" action="/admin/edit?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="form__flex">
                 <div class="form__box--flex">
-                    <label class="form__label" for="collection">Categoría:</label>
-                    <select class="form__select" name="collection" id="collection" required>
+                    <label class="form__label" for="category">Categoría:</label>
+                    <select class="form__select" name="category" id="category" required>
                         <option value="" disabled selected hidden>Seleccionar</option>
-                        <option value="Figuras Coleccionables">Figuras Coleccionables</option>
-                        <option value="Llaveros">Llaveros</option>
-                        <option value="Remeras">Remeras</option>
+                        <option value="1">Figuras Coleccionables</option>
+                        <option value="3">Llaveros</option>
+                        <option value="2">Remeras</option>
                     </select>
                 </div>
                 <div class="form__box--flex">
-                    <label class="form__label" for="collection">Licencia:</label>
-                    <select class="form__select" name="collection" id="collection" required>
+                    <label class="form__label" for="licence">Licencia:</label>
+                    <select class="form__select" name="licence" id="licence" required>
                         <option value="" disabled selected hidden>Seleccionar</option>
-                        <option value="starwars">Star Wars</option>
-                        <option value="pokemon">Pokemon</option>
-                        <option value="harrypotter">Harry Potter</option>
+                        <option value="2">Star Wars</option>
+                        <option value="1">Pokemon</option>
+                        <option value="3">Harry Potter</option>
                     </select>
                 </div>
             </div>
             <div class="form__box--flex">
                 <label class="form__label" for="name">Nombre del producto:</label>
-                <input class="form__input" type="text" name="name" id="name" placeholder="Kakashi Hatake Shippuden Saga" required>
+                <input class="form__input" type="text" name="name" id="name" value="<%= product.product_name %>" required>
             </div>
             <div>
-                <textarea name="description" id="description" cols="30" rows="10" placeholder="Descripción del producto" required></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" required><%= product.product_description %></textarea>
             </div>
             <div class="form__flex">
                 <div class="form__box--flex">
                     <label class="form__label" for="sku">SKU:</label>
-                    <input class="form__input" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                    <input class="form__input" type="text" name="sku" id="sku" value="<%= product.sku %>" required>
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="price">Precio:</label>
-                    <div class="form__input--wrapper"><span>$</span><input class="form__input" type="text" name="price" id="price" data-type="currency" placeholder="0.000,00"></div>
+                    <div class="form__input--wrapper"><span>$</span><input class="form__input" type="text" name="price" id="price" data-type="currency" value="<%= product.price %>"></div>
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="stock">Stock:</label>
-                    <div class="form__input--wrapper"><input class="form__input" type="text" name="stock" id="stock" placeholder="0" required><span>unidades</span></div>
+                    <div class="form__input--wrapper"><input class="form__input" type="text" name="stock" id="stock" value="<%= product.stock %>" required><span>unidades</span></div>
                 </div>
             </div>
             <div class="form__flex">
                 <div class="form__box--flex">
                     <label class="form__label" for="discount">Descuento:</label>
-                    <div class="form__input--wrapper"><input class="form__input" type="text" name="discount" id="discount" placeholder="0" required><span>%</span></div>
+                    <div class="form__input--wrapper"><input class="form__input" type="text" name="discount" id="discount" value="<%= product.discount %>" required><span>%</span></div>
                 </div>
                 <div class="form__box--flex">
                     <label class="form__label" for="dues">Cuotas:</label>
@@ -81,11 +81,11 @@
             </div>
             <div class="form__box--flex">
                 <div class="edit__img">
-                    <img src="../../multimedia/harry-potter/hermione-1.webp" alt="Figura Funko coleccionable de Hermione">
+                    <img src="../../img/<%= product.image_front %>" alt="Figura Funko coleccionable de Hermione">
                     <p class="edit__img-side">Frente</p>
                 </div>
                 <div class="edit__img">
-                    <img src="../../multimedia/harry-potter/hermione-box.webp" alt="Figura Funko coleccionable de Hermione en caja">
+                    <img src="../../img/<%= product.image_back %>" alt="Figura Funko coleccionable de Hermione en caja">
                     <p class="edit__img-side">Dorso</p>
                 </div>
             </div>
@@ -98,7 +98,17 @@
     
     <%- include('../../partials/footer')%>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    <script>
+        function selectElement(id, valueToSelect) {    
+            let element = document.getElementById(id);
+            element.value = valueToSelect;
+        }
+
+        selectElement('dues', '<%= product.dues %>');
+        selectElement('category', '<%= product.category_id %>');
+        selectElement('licence', '<%= product.licence_id %>');
+
+</script>
 </body>
 </html>

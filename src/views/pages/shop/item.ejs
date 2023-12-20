@@ -13,14 +13,14 @@
     <main class="container">
         <section class="item">
             <picture class="item__img card-item__cover">
-                <img class="card-item__img--front" src="<%= item.img_front %>" alt="Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga">
-                <img class="card-item__img--back" src="<%= item.img_back %>" alt="Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga">
+                <img class="card-item__img--front" src="../../img<%= item.image_front %>" alt="Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga">
+                <img class="card-item__img--back" src="../../img<%= item.image_back %>" alt="Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga">
             </picture>
             <article class="item__info">
                 <p class="item__licence"><%= item.licence_name %></p>
                 <h3 class="item__name"><%= item.product_name %></h3>
                 <p class="item__description"><%= item. product_description %>.</p>
-                <p class="item__price">$<%= item.product_price %> .-</p>
+                <p class="item__price">$<%= item.price %> .-</p>
                 <form class="item__cart" action="#" method="POST" enctype="application/x-www-form-urlencoded">
                     <button id="subtract" class="item__quantity" type="button">-</button>
                     <input id="quantity" class="item__input" type="text" name="quantity" placeholder="0">
@@ -97,6 +97,5 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="../../JavaScrip/item.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-   <script src="../../JavaScrip/glide.js"></script>
 </body>
 </html>
